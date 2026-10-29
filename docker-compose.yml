@@ -1,0 +1,13 @@
+services:
+  ml-log-analyzer:
+    build: .
+    container_name: ml-training-log-analyzer
+
+    ports:
+      - "8501:8501"
+
+    volumes:
+      - ./data:/app/data
+      - ./outputs:/app/outputs
+
+    restart: unless-stopped
