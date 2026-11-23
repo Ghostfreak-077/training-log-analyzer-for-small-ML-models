@@ -3,10 +3,10 @@ import tempfile
 
 import streamlit as st
 
-from parser import parse_log
-from analyzer import analyze_training
-from visualizer import plot_training_metrics
-from diagnostics import diagnose_training
+from src.parser import parse_log
+from src.analyzer import analyze_training
+from src.visualizer import plot_training_metrics
+from src.diagnostics import diagnose_training
 
 st.set_page_config(page_title="ML Training Log Analyzer")
 

@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 
-from parser import parse_log
+from src.parser import parse_log
 
 
 def analyze_training(df):

@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
-
-from parser import parse_log
+import re
+from src.parser import parse_log
 
 
 def plot_training_metrics(df):
@@ -21,7 +21,7 @@ def plot_training_metrics(df):
         plt.legend()
         plt.grid(True)
         plt.tight_layout()
-        plt.savefig("loss_curve.png")
+        plt.savefig("outputs/loss_curve.png")
         plt.show()
 
     # Plot accuracy
@@ -36,10 +36,10 @@ def plot_training_metrics(df):
         plt.legend()
         plt.grid(True)
         plt.tight_layout()
-        plt.savefig("accuracy_curve.png")
+        plt.savefig("outputs/accuracy_curve.png")
         plt.show()
 
 
 if __name__ == "__main__":
-    df = parse_log("data/sample_log.txt")
+    df = parse_log("outputs/log_1.txt")
     plot_training_metrics(df)
